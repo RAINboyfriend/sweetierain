@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Hi Rain 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: 'Pacifico', cursive;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      padding: 50px 20px;
+    }
+
+    .welcome {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .icon {
+      font-size: 6em;
+      color: #fff;
+      animation: pulse 2s infinite;
+    }
+
+    .frame-button {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 20px 40px;
+      border: 4px dashed white;
+      border-radius: 20px;
+      font-size: 1.5em;
+      background-color: rgba(255,255,255,0.1);
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .frame-button:hover {
+      background-color: rgba(255,255,255,0.3);
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="welcome">Welcome, my sweetie Rain 💖</div>
+    
+    <div class="icon">
+      <i class="fas fa-envelope-heart"></i>
+    </div>
+    
+    <div class="frame-button" onclick="alert('Kamu manis banget 😘')">
+      Ayo klik ini
+    </div>
+  </div>
+
+</body>
+</html>
