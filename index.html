@@ -5,6 +5,9 @@
   <title>Hi Rain 💖</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <a href="galeri.html" class="frame-button">SEE THE MEMORY 📸</a>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
   <style>
     body {
       margin: 0;
@@ -74,6 +77,55 @@
       Ayo klik ini
     </div>
   </div>
+<audio id="bgm" loop>
+  <source src="ayo_-_chris_brown_&_tyga_(slowed_reverb_&_432hz).mp3" type="audio/mpeg">
+</audio>
+<button onclick="playMusic(this)" class="back-btn">🎵 Putar Musik</button>
+
+<script>
+  function playMusic(btn) {
+    const audio = document.getElementById('bgm');
+    audio.play();
+    btn.textContent = "🎶 Musik Sedang Diputar";
+    btn.disabled = true;
+  }
+</script>
+<script>
+  window.onload = () => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+      colors: ['#ff9a9e', '#fad0c4', '#fbc2eb']
+    });
+  };
+</script>
+<style>
+  .heart {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center/contain;
+    animation: float 10s infinite ease-in;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(100vh) scale(0.5); }
+    100% { transform: translateY(-10vh) scale(1); }
+  }
+</style>
+<script>
+  for (let i = 0; i < 20; i++) {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDelay = (Math.random() * 5) + "s";
+    document.body.appendChild(heart);
+  }
+</script>
+
 
 </body>
 </html>
