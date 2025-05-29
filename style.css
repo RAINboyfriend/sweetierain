@@ -1,0 +1,72 @@
+/* Font dan tampilan umum */
+body {
+  margin: 0;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  font-family: 'Pacifico', cursive;
+  color: white;
+  text-align: center;
+}
+
+/* Container utama galeri */
+.gallery-container {
+  padding: 50px 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+/* Galeri grid responsive */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* Gambar-gambar kenangan */
+.gallery img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: var(--delay);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover glowing effect */
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Animasi fadeUp */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tombol kembali & putar musik */
+.back-btn {
+  margin-top: 40px;
+  font-size: 1.2em;
+  text-decoration: none;
+  background: white;
+  color: #ee9ca7;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #fff0f5;
+  transform: scale(1.05);
+}
